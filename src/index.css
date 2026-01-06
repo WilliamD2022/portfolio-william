@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System - Dark Futuristic Purple/Neon Theme */
+
+@layer base {
+  :root {
+    /* Dark theme as default */
+    --background: 240 15% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 15% 9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 15% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 270 100% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 270 100% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom Colors */
+    --neon-purple: 270 100% 65%;
+    --neon-violet: 280 100% 70%;
+    --neon-blue: 220 100% 60%;
+    --deep-purple: 270 50% 20%;
+    --graphite: 240 10% 12%;
+    --graphite-light: 240 10% 18%;
+    
+    /* Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(270 100% 65%), hsl(280 100% 70%), hsl(220 100% 60%));
+    --gradient-card: linear-gradient(180deg, hsl(240 15% 12%), hsl(240 15% 8%));
+    --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(270 100% 65% / 0.3), transparent);
+    
+    /* Shadows */
+    --shadow-neon: 0 0 40px hsl(270 100% 65% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 60px hsl(270 100% 65% / 0.4);
+
+    --sidebar-background: 240 15% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 270 100% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 15% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 10% 20%;
+    --sidebar-ring: 270 100% 65%;
+  }
+
+  .dark {
+    --background: 240 15% 6%;
+    --foreground: 0 0% 98%;
+    --card: 240 15% 9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 15% 9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 270 100% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 60%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 270 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-outfit antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-xl border border-border/50 rounded-xl;
+  }
+
+  .neon-text {
+    @apply bg-gradient-to-r from-primary via-accent to-neon-blue bg-clip-text text-transparent;
+  }
+
+  .neon-border {
+    @apply border border-primary/50 shadow-[0_0_20px_hsl(270_100%_65%/0.2)];
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(270_100%_65%/0.3)];
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-20 md:py-28;
+  }
+
+  .skill-badge {
+    @apply px-4 py-2 rounded-lg bg-secondary/50 border border-border/50 text-sm font-medium
+           transition-all duration-300 hover:border-primary/50 hover:bg-primary/10 hover:shadow-[0_0_20px_hsl(270_100%_65%/0.2)];
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(270 100% 65% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(270 100% 65% / 0.5);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
