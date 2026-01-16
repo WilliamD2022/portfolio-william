@@ -6,7 +6,7 @@ const ProjectsSection = () => {
   const { language } = useLanguage();
   const copy = {
     pt: {
-      eyebrow: "Portfolio",
+      eyebrow: "Portfólio",
       titlePrefix: "Projetos em",
       titleAccent: " Destaque",
       description:
@@ -15,6 +15,14 @@ const ProjectsSection = () => {
       viewOnGithub: "Ver no GitHub",
       viewAll: "Ver Todos os Projetos",
       projects: [
+        {
+          name: "Sistema de Agendamento",
+          description:
+              "Sistema de agendamento para barbearia, permitindo aos clientes marcar horários online de forma fácil e rápida.",
+          technologies: ["Java 21", "Spring Boot 3", "JPA", "Flyway", "PostgreSQL", "Angular 17", "Angular Material", "Docker"],
+          github: "https://github.com/WilliamD2022/Sistema-de-Agendamento-",
+          featured: true,
+        },
         {
           name: "ISO8583 Simulador",
           description:
@@ -47,14 +55,7 @@ const ProjectsSection = () => {
           github: "https://github.com/WilliamD2022/logintest",
           featured: false,
         },
-        {
-          name: "Automação REST Assured",
-          description:
-            "Suite de testes automatizados para APIs REST utilizando REST Assured e Java.",
-          technologies: ["Java", "REST Assured", "API Testing"],
-          github: "https://github.com/WilliamD2022/Automacao-teste-rast-assured-java",
-          featured: false,
-        },
+
         {
           name: "Automação Cypress",
           description:
@@ -75,6 +76,14 @@ const ProjectsSection = () => {
       viewOnGithub: "View on GitHub",
       viewAll: "View All Projects",
       projects: [
+        {
+          name: "Scheduling System",
+          description:
+            "Scheduling system for a barbershop, allowing customers to book appointments online quickly and easily.",
+          technologies: ["Java 21", "Spring Boot 3", "JPA", "Flyway", "PostgreSQL", "Angular 17", "Angular Material", "Docker"],
+          github: "https://github.com/WilliamD2022/Sistema-de-Agendamento-",
+          featured: true,
+        },
         {
           name: "ISO8583 Simulator",
           description:

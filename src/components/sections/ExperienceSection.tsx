@@ -10,21 +10,21 @@ const ExperienceSection = () => {
       titleAccent: " Profissional",
       experiences: [
         {
-          role: "Desenvolvedor Java Back end",
+          role: "Desenvolvedor Java Backend",
           company: "ACT DIGITAL",
           period: "Atualmente",
-          location: "Barueri/SP, Brazil",
+          location: "Barueri/SP, Brasil",
           description:
             "Desenvolvimento de sistemas para bancos e instituições financeiras, focando em controle de empréstimos, créditos e débitos.",
           highlights: [
-            "desenvolvendo e mantendo APIs escaláveis com Java 17+, Spring Boot e Spring Data JPA, integradas a PostgreSQL e MongoDB",
+            "Desenvolvendo e mantendo APIs escaláveis com Java 17+, Spring Boot e Spring Data JPA, integradas a PostgreSQL e MongoDB",
           ],
         },
         {
-          role: "Engenheiro de Software SR",
+          role: "Engenheiro de Software Sênior",
           company: "ITAU UNIBANCO",
           period: "Mai 2018 – Setembro 2025",
-          location: "São Paulo, Brazil",
+          location: "São Paulo, Brasil",
           description:
             "Desenvolvimento com back-end, front-end e automações para o ecossistema PJ do Itaú.",
           highlights: [
@@ -38,7 +38,7 @@ const ExperienceSection = () => {
           role: "Analista de Testes e Automação",
           company: "Sempre IT",
           period: "out 2017 – jul 2018",
-          location: "São Paulo, Brazil",
+          location: "São Paulo, Brasil",
           description: "Desenvolvimento de automações de testes",
           highlights: [
             "Cenários de testes automatizados com Selenium WebDriver e Java",
@@ -50,7 +50,7 @@ const ExperienceSection = () => {
           role: "Analista de Automação de Testes",
           company: "Tatsoft",
           period: "Nov 2016 – Out 2017",
-          location: "Santo Amaro, SP, Brazil",
+          location: "Santo Amaro, SP, Brasil",
           description:
             "Desenvolvimento de scripts de transações financeiras e automação de testes para sistemas ISO8583.",
           highlights: [
@@ -63,7 +63,7 @@ const ExperienceSection = () => {
           role: "Analista de Testes",
           company: "Inmetrics/Redecard",
           period: "Set 2010 – Ago 2016",
-          location: "Alphaville, SP, Brazil",
+          location: "Alphaville, SP, Brasil",
           description: "Analista de testes para sistemas bancários e financeiros ISO8583.",
           highlights: [
             "Teste de Transações Financeiras",

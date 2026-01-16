@@ -7,7 +7,7 @@ const HeroSection = () => {
   const copy = {
     pt: {
       status: "Disponível para novos projetos",
-      titleRole: "Desenvolvedor Java Back end",
+      titleRole: "Desenvolvedor Java Backend",
       impact:
         "Engenheiro de Software com mais de 15 anos de experiência, atuando no desenvolvimento de soluções escaláveis e na entrega contínua de software em ambientes complexos, distribuídos e de alta disponibilidade.",
       ctaProjects: "Ver Projetos",
@@ -23,6 +23,7 @@ const HeroSection = () => {
     },
   } as const;
   const text = copy[language];
+  const techStackLabel = language === "pt" ? "Cloud e DevOps" : "Cloud & DevOps";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -66,7 +67,7 @@ const HeroSection = () => {
 
         {/* Tech Stack */}
         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up">
-          <span className="text-primary">Java</span> • <span className="text-accent">Spring Boot</span> • <span className="text-accent">Quarkus</span> • <span className="text-neon-blue">AWS</span> • Cloud & DevOps
+          <span className="text-primary">Java</span> • <span className="text-accent">Spring Boot</span> • <span className="text-accent">Quarkus</span> • <span className="text-neon-blue">AWS</span> • {techStackLabel}
         </p>
 
         {/* Impact Statement */}

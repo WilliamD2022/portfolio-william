@@ -14,25 +14,25 @@ const Index = () => {
   const { language } = useLanguage();
   const copy = {
     pt: {
-      title: "William Domingues Barbosa | Desenvolvedor Java Back end",
+      title: "William Domingues Barbosa | Desenvolvedor Java Backend",
       description:
-        "Desenvolvedor Java Back end especializado em Java, Spring Boot, Quarkus, AWS e arquitetura de microsserviços. +15 anos de experiência no setor financeiro.",
+        "Desenvolvedor Java Backend especializado em Java, Spring Boot, Quarkus, AWS e arquitetura de microsserviços. +15 anos de experiência no setor financeiro.",
       keywords:
-        "William Domingues Barbosa, Desenvolvedor Java Back end, Java Developer, Spring Boot, Quarkus,  AWS, Microservices, Backend Developer, Brazil",
+        "William Domingues Barbosa, Desenvolvedor Java Backend, Java Developer, Spring Boot, Quarkus, AWS, Microservices, Backend Developer, Brazil",
       ogTitle:
-        "William Domingues Barbosa | Desenvolvedor Java Back end",
+        "William Domingues Barbosa | Desenvolvedor Java Backend",
       ogDescription:
-        "Desenvolvedor Java Back end especializado em Java, Spring Boot, Quarkus,  AWS e arquitetura de microsserviços.",
+        "Desenvolvedor Java Backend especializado em Java, Spring Boot, Quarkus, AWS e arquitetura de microsserviços.",
     },
     en: {
       title: "William Domingues Barbosa | Java Backend Developer",
       description:
-        "Java backend developer specialized in Java, Spring Boot, Quarkus,  AWS, and microservices architecture. 15+ years of experience in the financial sector.",
+        "Java backend developer specialized in Java, Spring Boot, Quarkus, AWS, and microservices architecture. 15+ years of experience in the financial sector.",
       keywords:
-        "William Domingues Barbosa, Java Backend Developer, Java Developer, Spring Boot, Quarkus,  AWS, Microservices, Backend Developer, Brazil",
+        "William Domingues Barbosa, Java Backend Developer, Java Developer, Spring Boot, Quarkus, AWS, Microservices, Backend Developer, Brazil",
       ogTitle: "William Domingues Barbosa | Java Backend Developer",
       ogDescription:
-        "Java backend developer specialized in Java, Spring Boot, Quarkus,  AWS, and microservices architecture.",
+        "Java backend developer specialized in Java, Spring Boot, Quarkus, AWS, and microservices architecture.",
     },
   } as const;
   const text = copy[language];

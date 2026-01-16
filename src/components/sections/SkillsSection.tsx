@@ -22,7 +22,7 @@ const SkillsSection = () => {
           ],
         },
         {
-          title: "Cloud & DevOps",
+          title: "Cloud e DevOps",
           skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Jenkins", "GitHub Actions"],
         },
         {
@@ -32,11 +32,11 @@ const SkillsSection = () => {
         {
           title: "Arquitetura",
           skills: [
-            "Microservices",
+            "Microsserviços",
             "Clean Architecture",
             "DDD",
             "SOLID",
-            "Event-Driven",
+            "Orientado a eventos",
             "TDD",
           ],
         },

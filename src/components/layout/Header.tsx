@@ -20,7 +20,7 @@ const Header = () => {
     pt: {
       nav: {
         about: "Sobre",
-        skills: "Skills",
+        skills: "Tecnologias",
         projects: "Projetos",
         experience: "Experiência",
         certifications: "Formação",

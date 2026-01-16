@@ -10,30 +10,30 @@ const AboutSection = () => {
       titleAccent: " código",
       bio: [
         "Sou um ",
-        "Engenheiro de Software Sênior",
-        " com mais de 15 anos de experiência, especializado em desenvolver aplicações escaláveis, performáticas e seguras. Minha trajetória inclui projetos complexos no ",
+        "Desenvolvedor Java Backend",
+        ", com mais de 15 anos de experiência no desenvolvimento de soluções escaláveis, performáticas e seguras, atuando em ambientes complexos e de alta disponibilidade. Minha trajetória inclui projetos críticos no ",
         "setor financeiro",
-        ", onde atuei no desenvolvimento de sistemas para controle de empréstimos, créditos e análise de risco.",
+        ", envolvendo sistemas de crédito, pagamentos, Pix, Open Finance e análise de risco.",
       ],
       bioSecond:
         "Tenho forte atuação em Clean Architecture, DDD e princípios SOLID, garantindo código sustentável e de fácil manutenção. Minha experiência abrange sistemas críticos em ambientes financeiros e industriais, além de plataformas de dados e integração.",
       bioThird:
-        "Atualmente focado em desenvolvimento e arquitetura, cloud computing (AWS), automação de testes e práticas DevOps modernas.",
+        "Atualmente focado em desenvolvimento e arquitetura de sistemas, cloud computing (AWS), automação de testes e práticas DevOps modernas.",
       highlights: [
         {
           icon: Code2,
-          title: "Backend Expert",
+          title: "Especialista Backend",
           description:
-            "Especialista em Java 17+, Spring Boot e arquiteturas de microsserviços",
+            "Especialista em Java 17+, Spring Boot, Quarkus  e arquiteturas de microsserviços",
         },
         {
           icon: Cloud,
-          title: "Cloud & DevOps",
+          title: "Cloud e DevOps",
           description: "AWS, Docker, Kubernetes e pipelines CI/CD automatizados",
         },
         {
           icon: Database,
-          title: "Data Architecture",
+          title: "Arquitetura de Dados",
           description: "PostgreSQL, MySQL, Redis e modelagem de dados escalável",
         },
         {
@@ -49,15 +49,15 @@ const AboutSection = () => {
       titleAccent: " code",
       bio: [
         "I am a ",
-        "Senior Software Engineer",
-        " with 15+ years of experience, specialized in building scalable, high-performance, and secure applications. My journey includes complex projects in the ",
+        "Java Backend Developer",
+        ", with 15+ years of experience building scalable, high-performance, and secure solutions in complex, high-availability environments. My journey includes mission-critical projects in the ",
         "financial sector",
-        ", where I worked on systems for loan control, credit management, and risk analysis.",
+        ", involving credit systems, payments, Pix, Open Finance, and risk analysis.",
       ],
       bioSecond:
-        "I work heavily with Clean Architecture, DDD, and SOLID principles, ensuring sustainable, maintainable code. My experience spans critical systems in financial and industrial environments, plus data and integration platforms.",
+        "I work heavily with Clean Architecture, DDD, and SOLID principles, ensuring sustainable, maintainable code. My experience spans critical systems in financial and industrial environments, as well as data and integration platforms.",
       bioThird:
-        "Currently focused on microservices architecture, cloud computing (AWS), test automation, and modern DevOps practices.",
+        "Currently focused on systems development and architecture, cloud computing (AWS), test automation, and modern DevOps practices.",
       highlights: [
         {
           icon: Code2,
@@ -117,8 +117,7 @@ const AboutSection = () => {
               <>
                 Tenho forte atuação em{" "}
                 <span className="text-accent">Clean Architecture, DDD e princípios SOLID</span>, 
-                garantindo código sustentável e de fácil manutenção. Minha experiência abrange desde sistemas SCADA 
-                para empresas globais como Chevron até plataformas de trading de commodities.
+                garantindo código sustentável e de fácil manutenção. Minha experiência abrange sistemas críticos em ambientes financeiros e industriais, além de plataformas de dados e integração.
               </>
             ) : (
               text.bioSecond
@@ -129,7 +128,7 @@ const AboutSection = () => {
             {language === "pt" ? (
               <>
                 Atualmente focado em{" "}
-                <span className="text-neon-blue">desenvolvimento e arquitetura</span>,
+                <span className="text-neon-blue">desenvolvimento e arquitetura de sistemas</span>,
                 {" "}cloud computing (AWS), automação de testes e práticas DevOps modernas.
               </>
             ) : (

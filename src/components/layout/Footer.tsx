@@ -1,20 +1,47 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/language";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { language } = useLanguage();
+  const [visitors, setVisitors] = useState<number | null>(null);
   const copy = {
     pt: {
       madeWith: "Feito com",
       using: "usando React & Tailwind",
+      visitorsLabel: "Visitantes",
     },
     en: {
       madeWith: "Made with",
       using: "using React & Tailwind",
+      visitorsLabel: "Visitors",
     },
   } as const;
   const text = copy[language];
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const run = async () => {
+      try {
+        const response = await fetch(
+          "https://api.countapi.xyz/hit/williamdbarbosa.dev/visits",
+          { signal: controller.signal }
+        );
+        if (!response.ok) return;
+        const data = (await response.json()) as { value?: number };
+        if (typeof data.value === "number") {
+          setVisitors(data.value);
+        }
+      } catch (error) {
+        if ((error as Error).name !== "AbortError") {
+          // Silently ignore tracking errors to avoid UI noise.
+        }
+      }
+    };
+    run();
+    return () => controller.abort();
+  }, []);
 
   return (
     <footer className="border-t border-border/50 bg-card/30">
@@ -66,12 +93,19 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Made with love */}
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            {text.madeWith}
-            <Heart className="w-4 h-4 text-primary fill-primary" />
-            {text.using}
-          </p>
+          {/* Made with love + visitors */}
+          <div className="text-sm text-muted-foreground flex items-center gap-4">
+            <p className="flex items-center gap-1">
+              {text.madeWith}
+              <Heart className="w-4 h-4 text-primary fill-primary" />
+              {text.using}
+            </p>
+            {visitors !== null && (
+              <span className="rounded-full border border-border/60 px-3 py-1 text-xs">
+                {text.visitorsLabel}: {visitors.toLocaleString()}
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </footer>
